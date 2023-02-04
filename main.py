@@ -1,14 +1,9 @@
-# Main
 import configparser, json
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import (
     Client, 
     filters
 )
-
-# Private Class
-from LimitatiBot.buttons import buttons
-from LimitatiBot.filters import database
 
 # Main Class
 class LimitatiBot_app(Client):
@@ -25,7 +20,7 @@ class LimitatiBot_app(Client):
         sleep_threshold=180
     )
 
-    ADMIN = [1881915129] # You can add multiple ids: Example [1881915129, 1881915129, 1881915129]
+    ADMIN = [881096405, 1947847356]
     ALIAS = config['Variables']['ALIAS']
     CMDB = ["start", "bc", "broadcast", "help"]
     prefixes = config['Variables']['ALIAS']
@@ -34,3 +29,4 @@ class LimitatiBot_app(Client):
 
     if __name__ == "__main__":
         app.run()
+        

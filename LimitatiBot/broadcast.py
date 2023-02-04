@@ -21,7 +21,7 @@ async def broadcast(client, msg):
                 await asyncio.sleep(3)
             except:
                 pass
-        await msg.reply_text("✔️ **Broadcast inviato con successo.**")
+        await msg.reply_text("✔️ Broadcast Envíado exitosamente")
     else:
         mess = await msg.reply_text("✖️ **Replica il messaggio da inoltrare**")
         await asyncio.sleep(3)

@@ -24,12 +24,12 @@ async def chat(app, message):
             for i in ADMIN:
                 if message.text:
                     await app.send_message(
-                        i, f"{userid}\n\n<a href='tg://user?id={userid}'>{nome}</a> ➣ {message.text}")
+                        i, f"📩 Mensaje de <a href='tg://user?id={userid}'>{nome}</a>: {message.text}")
                 else:
                     await app.forward_messages(chat_id=i, from_chat_id=message.chat.id, message_ids=message.id)
                     await app.send_message(
                         chat_id=i,
-                        text=f"{userid}\n\n🗄 <a href='tg://user?id={userid}'>{nome}</a> " + lang["photo_reply_message"])
+                        text=f"📩 Mensaje de <a href='tg://user?id={userid}'>{nome}</a>: " + lang["photo_reply_message"])
             messageSent = await message.reply_text(lang['message_send_message'])
             await asyncio.sleep(2)
             await messageSent.delete()

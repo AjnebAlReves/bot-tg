@@ -28,6 +28,6 @@ class buttons():
 
     #   Return Home Button
     avcendkey = InlineKeyboardMarkup([
-        [InlineKeyboardButton(text='🏡 Home', callback_data='home')]
+        [InlineKeyboardButton(text='🏡 Inicio', callback_data='home')]
     ])
 
